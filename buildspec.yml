@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws deploy push --application-name final-deploy-group --s3-location s3://final-kadai/artifact.zip --source src
+      - aws deploy push --application-name final-codedeploy-app --s3-location s3://final-kadai/artifact.zip --source src
 artifacts:
   files:
     - '**/*'
