@@ -3,8 +3,21 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws deploy push --application-name final-codedeploy-app --s3-location s3://final-kadai/artifact.zip --source src
+      - echo "Build step skipped"
 artifacts:
   files:
-    - '**/*'
+    - appspec.yml
+    - index.html
   base-directory: src
+  discard-paths: yes
+
+# version: 0.2
+
+# phases:
+#   build:
+#     commands:
+#       - aws deploy push --application-name final-codedeploy-app --s3-location s3://final-kadai/artifact.zip --source src
+# artifacts:
+#   files:
+#     - '**/*'
+#   base-directory: src
